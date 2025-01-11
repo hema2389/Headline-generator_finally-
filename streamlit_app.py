@@ -19,7 +19,7 @@ def load_model():
 model, tokenizer, device = load_model()
 
 # Function to Generate Headline
-def generate_headline(article, max_length=64, num_beams=5):
+def generate_headline(article, max_length=20, num_beams=5):
     inputs = tokenizer(
         article, return_tensors="pt", truncation=True, max_length=512
     ).to(device)
